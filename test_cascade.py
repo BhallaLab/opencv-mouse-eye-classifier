@@ -27,7 +27,6 @@ def main(  ):
     frames = tf.iter_images( )
     for fi, frame in enumerate( frames ):
         eyes = cascade.detectMultiScale(frame)
-        print( eyes.shape, frame.shape )
         for (ex,ey,ew,eh) in eyes:
             cv2.rectangle(frame,(ex,ey),(ex+ew,ey+eh),255,2)
         cv2.imshow('Frame', frame)
