@@ -1,8 +1,4 @@
-./positive_images/c-20.png
 ./positive_images/b-171.png
-./positive_images/background.png
 ./positive_images/b-167.png
 ./positive_images/a-0.png
-./positive_images/negative.png
-./positive_images/b-267.png
 ./positive_images/b-109.png
