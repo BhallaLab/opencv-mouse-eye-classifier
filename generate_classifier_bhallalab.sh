@@ -9,6 +9,7 @@ perl bin/createsamples.pl positives.txt negatives.txt samples 1500\
 python ./tools/mergevec.py -v samples/ -o samples.vec
 opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
    -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
-   -numNeg 600 -w 80 -h 40 -mode ALL -precalcValBufSize 1024\
-   -precalcIdxBufSize 1024 -featureType LBP
+   -numNeg 600 -w 80 -h 40 -mode ALL \
+   -precalcValBufSize 1024\
+   -precalcIdxBufSize 1024 # -featureType LBP
 
