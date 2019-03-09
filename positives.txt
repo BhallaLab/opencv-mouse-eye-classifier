@@ -1,4 +1,3 @@
-./positive_images/b-171.png
 ./positive_images/b-167.png
 ./positive_images/a-0.png
 ./positive_images/b-109.png
