@@ -21,7 +21,6 @@
 ./negative_images/20190217_064409.jpg
 ./negative_images/IMG_20180708_103459339.jpg
 ./negative_images/IMG_20181223_070028104_HDR.jpg
-./negative_images/IMG_20180128_155817526.jpg
 ./negative_images/20190217_100422.jpg
 ./negative_images/IMG_20190222_180137.jpg
 ./negative_images/IMG_20181009_180317.jpg
@@ -48,8 +47,6 @@
 ./negative_images/IMG_20190304_171831.jpg
 ./negative_images/IMG_20190220_090822.jpg
 ./negative_images/IMG-20180125-WA0000.jpg
-./negative_images/IMG_20181223_091700643_HDR.jpg
-./negative_images/IMG_20180128_155810993.jpg
 ./negative_images/IMG_20171209_165514822_HDR.jpg
 ./negative_images/IMG_4701.jpg
 ./negative_images/IMG_20181223_073912140_HDR.jpg
@@ -62,10 +59,7 @@
 ./negative_images/IMG_20180128_171313.jpg
 ./negative_images/IMG_4677.jpg
 ./negative_images/IMG_20180925_190822.jpg
-./negative_images/20181223_130650.jpg
 ./negative_images/20190217_065702.jpg
-./negative_images/IMG_20171207_151003264_DEPTH.jpg
-./negative_images/20181223_103222.jpg
 ./negative_images/IMG_20180110_175414599_LL.jpg
 ./negative_images/IMG-20180126-WA0005.jpg
 ./negative_images/IMG-20171221-WA0004.jpg
