@@ -1,8 +1,7 @@
 # About
 
 This repository is fork of
-[https://github.com/mrnugget/opencv-haar-classifier-trainin://github.com/mrnugget/opencv-haar-classifier-training]
-. The details are on [this
+[https://github.com/mrnugget/opencv-haar-classifier-train]. The details are on [this
 blog](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html).
 Please visit this blog or the original repository for details.
 
