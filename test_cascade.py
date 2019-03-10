@@ -13,17 +13,16 @@ __status__           = "Development"
 
 import sys
 import os
-import matplotlib.pyplot as plt
+import pathlib
 import numpy as np
 from libtiff import TIFF
 import cv2
 
-def main(  ):
-    print( sys.argv )
-    tifffile = sys.argv[1]
-    cascade = cv2.CascadeClassifier(sys.argv[2])
+def main(args):
+    tifffile = args.tiff
+    cascade = cv2.CascadeClassifier(args.cascade)
     print( '[INFO] Processing %s' % tifffile )
-    tf = TIFF.open( tifffile )
+    tf = TIFF.open(tifffile)
     frames = tf.iter_images( )
     for fi, frame in enumerate( frames ):
         eyes = cascade.detectMultiScale(frame, scaleFactor=1.1, minNeighbors=10
@@ -39,4 +38,19 @@ def main(  ):
         cv2.waitKey(10)
 
 if __name__ == '__main__':
-    main()
+    import argparse
+    # Argument parser.
+    description = '''Process TIFF file to locate eye.'''
+    parser = argparse.ArgumentParser(description=description)
+    parser.add_argument('--tiff', '-t'
+        , required = True
+        , help = 'Input TIFF file'
+        )
+    parser.add_argument('--cascade', '-c'
+        , required = True
+        , help = 'LBP classifier (XML file)'
+        )
+    class Args: pass 
+    args = Args()
+    parser.parse_args(namespace=args)
+    main(args)
