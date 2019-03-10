@@ -26,7 +26,9 @@ def main(  ):
     tf = TIFF.open( tifffile )
     frames = tf.iter_images( )
     for fi, frame in enumerate( frames ):
-        eyes = cascade.detectMultiScale(frame)
+        eyes = cascade.detectMultiScale(frame, scaleFactor=1.1, minNeighbors=10
+                , minSize=(150,150), maxSize=(350,250)
+                )
         if len(eyes)<1:
             continue
         # sort according to area.
