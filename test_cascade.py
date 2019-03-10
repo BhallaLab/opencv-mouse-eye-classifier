@@ -25,8 +25,9 @@ def main(args):
     tf = TIFF.open(tifffile)
     frames = tf.iter_images( )
     for fi, frame in enumerate( frames ):
-        eyes = cascade.detectMultiScale(frame, scaleFactor=1.1, minNeighbors=10
-                , minSize=(150,150), maxSize=(350,250)
+        eyes = cascade.detectMultiScale(frame, scaleFactor=1.05, minNeighbors=20
+                , minSize=(150,150)
+                #  , maxSize=(250,250)
                 )
         if len(eyes)<1:
             continue
@@ -39,7 +40,7 @@ def main(args):
             #  roi = frame[ey:ey+eh,ex:ex+ew]
             #  cv2.imshow('ROI', roi)
 
-        #  cv2.imshow('Frame', frame)
+        cv2.imshow('Frame', frame)
         cv2.waitKey(10)
 
 if __name__ == '__main__':
