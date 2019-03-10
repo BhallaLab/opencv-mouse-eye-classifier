@@ -1,10 +1,9 @@
 # About
 
-This repository is fork of
-[https://github.com/mrnugget/opencv-haar-classifier-train]. The details are on [this
-blog](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html).
-Please visit this blog or the original repository for details.
-
+This repository is fork of https://github.com/mrnugget/opencv-haar-classifier-training . 
+The details are on [this blog](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html).
+Please visit this blog or the original repository for details. The official OpenCV documentation 
+is pretty good too https://docs.opencv.org/3.4.3/d7/d8b/tutorial_py_face_detection.html 
 
 # How to train?
 
@@ -19,7 +18,6 @@ To use the existing images, you need to install `git-lfs` and run
     make 
 
 to pull the default images and start the process.
-
 
 It will create a LBP classifier and save it to `./classifier_lpb/cascade.xml`.
 To create a HAAR classifier (It will at least 100 times more time to train), run
