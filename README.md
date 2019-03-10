@@ -14,6 +14,14 @@ into `./positive_images/`. And run
 
     make 
 
+To use the existing images, you need to install `git-lfs` and run 
+    
+    git lfs pull
+    make 
+
+to pull the default images and start the process.
+
+
 It will create a LBP classifier and save it to `./classifier_lpb/cascade.xml`.
 To create a HAAR classifier (It will at least 100 times more time to train), run
 `make haar` and it will save the classifier to `./classifier_haar/cascade.xml`.
