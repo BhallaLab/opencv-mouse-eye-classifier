@@ -32,9 +32,14 @@ def main(args):
             continue
         # sort according to area.
         eyeWithArea = sorted([(x, x[-1]*x[-2]) for x in eyes], key=lambda x: x[-1])
+
+        # Draw only the last one.
         for (ex,ey,ew,eh), ar in eyeWithArea[-1:]:
             cv2.rectangle(frame,(ex,ey),(ex+ew,ey+eh),255,2)
-        cv2.imshow('Frame', frame)
+            #  roi = frame[ey:ey+eh,ex:ex+ew]
+            #  cv2.imshow('ROI', roi)
+
+        #  cv2.imshow('Frame', frame)
         cv2.waitKey(10)
 
 if __name__ == '__main__':
