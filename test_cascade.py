@@ -11,19 +11,15 @@ __maintainer__       = "Dilawar Singh"
 __email__            = "dilawars@ncbs.res.in"
 __status__           = "Development"
 
-import sys
-import os
-import pathlib
-import numpy as np
-from libtiff import TIFF
+import tifffile
 import cv2
+import numpy as np
 
 def main(args):
-    tifffile = args.tiff
     cascade = cv2.CascadeClassifier(args.cascade)
-    print( '[INFO] Processing %s' % tifffile )
-    tf = TIFF.open(tifffile)
-    frames = tf.iter_images( )
+    print( '[INFO] Processing %s' % args.tiff )
+    frames = tifffile.imread(args.tiff)
+    newFrames = []
     for fi, frame in enumerate( frames ):
         eyes = cascade.detectMultiScale(frame, scaleFactor=1.05, minNeighbors=20
                 , minSize=(150,150)
@@ -39,9 +35,15 @@ def main(args):
             cv2.rectangle(frame,(ex,ey),(ex+ew,ey+eh),255,2)
             #  roi = frame[ey:ey+eh,ex:ex+ew]
             #  cv2.imshow('ROI', roi)
-
+        newFrames.append(frame)
         cv2.imshow('Frame', frame)
         cv2.waitKey(10)
+
+    # Save all the frames.
+    tifffile.imsave('result.tif', np.array(newFrames))
+    print( "[INFO ] Wrote new frames to results.tif" )
+    
+    
 
 if __name__ == '__main__':
     import argparse
